@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kato wordt 15!!! 💖</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --roze: #ffb6d5;
+      --diep-roze: #ff7eb3;
+      --lila: #c9a7ff;
+      --room: #fff7fb;
+      --tekst: #5b3a54;
+      --schaduw: 0 10px 30px rgba(255, 126, 179, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Quicksand", sans-serif;
+      color: var(--tekst);
+      background:
+        linear-gradient(
+          160deg,
+          #ffe3f1 0%,
+          #f3e6ff 50%,
+          #e6f6ff 100%
+        );
+      background-attachment: fixed;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* =========================
+       ZWEVENDE ACHTERGRONDHARTJES
+       ========================= */
+
+    .hart-bg {
+      position: fixed;
+      top: 100vh;
+      font-size: 22px;
+      opacity: 0.5;
+      pointer-events: none;
+      z-index: 0;
+      animation: zweef linear forwards;
+    }
+
+    @keyframes zweef {
+      to {
+        transform: translateY(-115vh) rotate(40deg);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       WRAPPER
+       ========================= */
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 18px 80px;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+      text-align: center;
+      padding: 70px 10px 40px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: "Pacifico", cursive;
+      font-size: clamp(48px, 14vw, 96px);
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--diep-roze),
+          var(--lila)
+        );
+
+      width: 1.9em;
+      height: 1.9em;
+      line-height: 1.9em;
+
+      border-radius: 50%;
+
+      box-shadow: var(--schaduw);
+
+      animation: wieg 3s ease-in-out infinite;
+    }
+
+    @keyframes wieg {
+      0%,
+      100% {
+        transform: rotate(-5deg);
+      }
+
+      50% {
+        transform: rotate(5deg);
+      }
+    }
+
+    h1 {
+      font-family: "Pacifico", cursive;
+      font-size: clamp(32px, 7vw, 58px);
+      color: var(--diep-roze);
+      margin: 24px 0 10px;
+      line-height: 1.25;
+    }
+
+    .subtitel {
+      font-size: 18px;
+      font-weight: 600;
+      opacity: 0.75;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       KAARTEN
+       ========================= */
+
+    .kaart {
+      background: var(--room);
+      border-radius: 28px;
+      padding: 28px 24px 32px;
+      margin: 26px 0;
+
+      box-shadow: var(--schaduw);
+      border: 3px solid #fff;
+    }
+
+    h2 {
+      font-family: "Pacifico", cursive;
+      font-size: 28px;
+      color: var(--diep-roze);
+      margin-bottom: 6px;
+    }
+
+    .uitleg {
+      font-size: 15px;
+      opacity: 0.75;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+
+    .status {
+      font-weight: 700;
+      margin-top: 14px;
+      min-height: 26px;
+      line-height: 1.5;
+    }
+
+    button {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+
+      border: none;
+      border-radius: 999px;
+
+      padding: 11px 22px;
+
+      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--diep-roze),
+          var(--lila)
+        );
+
+      box-shadow: 0 6px 16px rgba(255, 126, 179, 0.35);
+
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 20px rgba(255, 126, 179, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* =========================
+       MEMORY
+       ========================= */
+
+    #memory {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 420px;
+    }
+
+    .mc {
+      aspect-ratio: 1;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--roze),
+          var(--lila)
+        );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 30px;
+
+      cursor: pointer;
+
+      color: transparent;
+      user-select: none;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .mc:hover {
+      transform: scale(1.05);
+    }
+
+    .mc.open {
+      background: #fff;
+      color: initial;
+      border: 3px solid var(--roze);
+    }
+
+    .mc.klaar {
+      background: #eaffe9;
+      color: initial;
+      border: 3px solid #a8e6a1;
+      cursor: default;
+      transform: none;
+    }
+
+    /* =========================
+       VANG DE HARTJES
+       ========================= */
+
+    #veld {
+      position: relative;
+      height: 330px;
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          #e9f6ff,
+          #ffeaf5
+        );
+
+      border: 3px dashed var(--roze);
+
+      touch-action: none;
+    }
+
+    .val {
+      position: absolute;
+      font-size: 28px;
+
+      user-select: none;
+      pointer-events: none;
+
+      width: 32px;
+      height: 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #mand {
+      position: absolute;
+      bottom: 6px;
+
+      font-size: 38px;
+
+      transform: translateX(-50%);
+
+      user-select: none;
+      pointer-events: none;
+
+      transition: left 0.05s linear;
+    }
+
+    /* =========================
+       QUIZ
+       ========================= */
+
+    #vraag {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .opties {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 460px;
+    }
+
+    .opt {
+      background: #fff;
+      color: var(--tekst);
+
+      border: 3px solid var(--roze);
+
+      text-align: left;
+
+      box-shadow: none;
+    }
+
+    .opt:hover {
+      transform: translateY(-1px);
+    }
+
+    .opt.goed {
+      background: #d9f7d5;
+      border-color: #8fd888;
+    }
+
+    .opt.fout {
+      background: #ffe0e0;
+      border-color: #ffa3a3;
+    }
+
+    /* =========================
+       BRIEF
+       ========================= */
+
+    .brief {
+      background: var(--room);
+
+      border-radius: 28px;
+
+      padding: 40px 30px;
+
+      box-shadow: var(--schaduw);
+
+      border: 3px solid #fff;
+
+      margin-top: 40px;
+    }
+
+    .aanhef {
+      font-family: "Pacifico", cursive;
+      font-size: clamp(30px, 6.5vw, 48px);
+      color: var(--diep-roze);
+      margin-bottom: 22px;
+    }
+
+    .brief p {
+      font-size: 17px;
+      line-height: 1.9;
+      margin-bottom: 16px;
+    }
+
+    .afsluiting {
+      font-family: "Pacifico", cursive;
+      font-size: clamp(26px, 5.5vw, 40px);
+      color: var(--lila);
+      margin-top: 34px;
+    }
+
+    .naam {
+      font-family: "Pacifico", cursive;
+      font-size: clamp(40px, 10vw, 72px);
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--diep-roze),
+          var(--lila)
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+
+      margin-top: 6px;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      opacity: 0.6;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       EXTRA SPELLETJES
+       ========================= */
+
+    .extra-game {
+      text-align: center;
+    }
+
+    .extra-game .game-area {
+      margin: 16px auto 0;
+      max-width: 520px;
+    }
+
+    /* Spel 4 — Hartjesreactie */
+    #reactieVeld {
+      position: relative;
+      height: 220px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #fff0f7, #f1e9ff);
+      border: 3px dashed var(--roze);
+      touch-action: manipulation;
+      user-select: none;
+    }
+
+    #reactieHart {
+      position: absolute;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      font-size: 42px;
+      cursor: pointer;
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.12s ease;
+    }
+
+    #reactieHart:active {
+      transform: translate(-50%, -50%) scale(0.85);
+    }
+
+    /* Spel 5 — Raad het getal */
+    .raad-box {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    #raadInput {
+      width: 130px;
+      padding: 11px 16px;
+      border: 3px solid var(--roze);
+      border-radius: 999px;
+      font: 700 15px "Quicksand", sans-serif;
+      color: var(--tekst);
+      background: #fff;
+      text-align: center;
+      outline: none;
+    }
+
+    #raadInput:focus {
+      border-color: var(--diep-roze);
+    }
+
+    /* Spel 6 — Emoji memory/snelkiezer */
+    #emojiKeuze {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 360px;
+      margin: 18px auto 0;
+    }
+
+    .emoji-knop {
+      background: #fff;
+      color: var(--tekst);
+      border: 3px solid var(--roze);
+      box-shadow: none;
+      font-size: 27px;
+      padding: 13px 8px;
+    }
+
+    .emoji-knop:hover {
+      transform: scale(1.04);
+    }
+
+    .emoji-knop.fout {
+      background: #ffe0e0;
+      border-color: #ffa3a3;
+      animation: miniShake 0.25s ease;
+    }
+
+    .emoji-knop.goed {
+      background: #d9f7d5;
+      border-color: #8fd888;
+    }
+
+    @keyframes miniShake {
+      0%, 100% { transform: translateX(0); }
+      35% { transform: translateX(-5px); }
+      70% { transform: translateX(5px); }
+    }
+
+
+    /* =========================
+       MOBIEL
+       ========================= */
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 45px;
+      }
+
+      .kaart {
+        padding: 24px 18px 28px;
+      }
+
+      .brief {
+        padding: 30px 20px;
+      }
+
+      .brief p {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      #memory {
+        gap: 8px;
+      }
+
+      .mc {
+        border-radius: 14px;
+        font-size: 26px;
+      }
+
+      #veld {
+        height: 280px;
+      }
+
+      .subtitel {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header>
+
+      <div class="badge">15</div>
+
+      <h1>
+        Gefeliciteerd, Katootjeeee! 🎀
+      </h1>
+
+      <p class="subtitel">
+        Ik heb echt uren en uren werk in deze site gestoken,
+        om alle spelletjes te maken, de tekst super mooi te maken
+        en alles mooi te krijgen. Uiteindelijk zit er zo'n 20 uur
+        werk in deze site, ik hoop echt dat je het leuk vindt!!
+      </p>
+
+    </header>
+
+
+    <!-- =========================
+         SPEL 1 — MEMORY
+         ========================= -->
+
+    <section class="kaart">
+
+      <h2>
+        1. Memory 🧸
+      </h2>
+
+      <p class="uitleg">
+        Vind alle 6 de paren. Hoe minder beurten, hoe beter!
+      </p>
+
+      <div id="memory"></div>
+
+      <p
+        class="status"
+        id="mStatus"
+      >
+        Beurten: 0
+      </p>
+
+      <button
+        type="button"
+        onclick="startMemory()"
+      >
+        Opnieuw
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         SPEL 2 — VANG DE HARTJES
+         ========================= -->
+
+    <section class="kaart">
+
+      <h2>
+        2. Vang de hartjes 💖
+      </h2>
+
+      <p class="uitleg">
+        Beweeg met je muis of vinger.
+        Vang 💖 (+1) en ontwijk 💔 (-1).
+        Je hebt 30 seconden!
+      </p>
+
+      <div id="veld">
+
+        <div id="mand">
+          🧺
+        </div>
+
+      </div>
+
+      <p
+        class="status"
+        id="vStatus"
+      >
+        Score: 0 · Tijd: 30
+      </p>
+
+      <button
+        type="button"
+        onclick="startVangen()"
+      >
+        Start spel
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         SPEL 3 — QUIZ
+         ========================= -->
+
+    <section class="kaart">
+
+      <h2>
+        3. Wat wil je graag met mij doen? 💕
+      </h2>
+
+      <p class="uitleg">
+        Vijf vraagjes over leuke dingen die we samen kunnen doen!
+      </p>
+
+      <p id="vraag"></p>
+
+      <div
+        class="opties"
+        id="opties"
+      ></div>
+
+      <p
+        class="status"
+        id="qStatus"
+      ></p>
+
+      <button
+        type="button"
+        onclick="startQuiz()"
+      >
+        Opnieuw
+      </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         SPEL 4 — REACTIESPEL
+         ========================= -->
+
+    <section class="kaart extra-game">
+
+      <h2>4. Tik het hartje! 💗</h2>
+
+      <p class="uitleg">
+        Wacht tot het hartje verschijnt en tik er zo snel mogelijk op.
+        Probeer je beste tijd te halen!
+      </p>
+
+      <div class="game-area">
+        <div id="reactieVeld">
+          <div id="reactieHart" role="button" aria-label="Tik het hartje">💗</div>
+        </div>
+
+        <p class="status" id="reactieStatus">
+          Klik op "Start" en wacht... 👀
+        </p>
+
+        <button type="button" onclick="startReactieSpel()">
+          Start
+        </button>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SPEL 5 — RAAD HET GETAL
+         ========================= -->
+
+    <section class="kaart extra-game">
+
+      <h2>5. Raad mijn getal 🔢</h2>
+
+      <p class="uitleg">
+        Ik heb een getal tussen 1 en 50 gekozen. Hoe snel kan jij het raden?
+      </p>
+
+      <div class="raad-box">
+        <input
+          id="raadInput"
+          type="number"
+          min="1"
+          max="50"
+          placeholder="1 - 50"
+          aria-label="Raad een getal"
+          onkeydown="if(event.key === 'Enter') raadGetal()"
+        >
+
+        <button type="button" onclick="raadGetal()">
+          Raad!
+        </button>
+      </div>
+
+      <p class="status" id="raadStatus">
+        Pogingen: 0 · Veel succes! 🍀
+      </p>
+
+      <button type="button" onclick="startRaadSpel()">
+        Nieuw getal
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         SPEL 6 — EMOJI SPRINT
+         ========================= -->
+
+    <section class="kaart extra-game">
+
+      <h2>6. Emoji-sprint ⚡</h2>
+
+      <p class="uitleg">
+        Onthoud de emoji die bovenaan verschijnt en klik daarna zo snel mogelijk
+        op de juiste emoji!
+      </p>
+
+      <p class="status" id="emojiStatus">
+        Klaar? Klik op Start! 👀
+      </p>
+
+      <div id="emojiKeuze"></div>
+
+      <button type="button" onclick="startEmojiSpel()">
+        Start
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         BRIEF
+         ========================= -->
+
+    <section class="brief">
+
+      <p class="aanhef">
+        Lieve Kato,
+      </p>
+
+      <p>
+        EINDELIJK 15 jaar! Ik wens jou echt de aller beste verjaardag
+        OOIT en ik hoop dat deze website alvast een duwtje in de juiste
+        richting is. Je krijgt ook nog een gelukkige verjaardag van
+        mama, papa, bomma &amp; bompa, Steve en hier is nog iemand die
+        jou een dikke lik geeft, BOB!!! 15 jaar geleden was de allerbeste
+        dag in de geschiedenis van de aarde. De aarde bestaat inmiddels
+        zo'n 4.55 miljard jaar (4.55 · 10⁹) jaar. Maar geen enkele dag
+        ooit was zo geweldig als exact 15 jaar geleden.
+      </p>
+
+      <p>
+        En ja, ik weet dat ik dit misschien een klein beetje overdreven
+        begin, maar je wordt maar één keer 15 en ik wil dat je weet dat
+        ik echt moeite heb gedaan om van vandaag iets speciaal te maken.
+        Ik heb echt uren en uren aan deze site gewerkt, aan de spelletjes,
+        de tekst, de kleine details en alles errond. Uiteindelijk zit er
+        zo'n 20 uur werk in deze site en toch heb ik op het einde nog steeds
+        het gevoel dat ik eigenlijk nog veel meer had willen toevoegen.
+        Niet omdat het niet goed genoeg is, maar omdat jij voor mij gewoon
+        iemand bent waarvoor ik graag veel moeite doe.
+      </p>
+
+      <p>
+        We hebben elkaar eigenlijk echt op de meest random manier ooit
+        leren kennen, ik ben Keano echt ongeloofelijk dankbaar dat hij
+        "perongeluk" (dik expres) m'n hele snel toevoegen toevoegde.
+        En logischerwijs, als je 250+ man toevoegd wordt je wel toegevoegd
+        door wat mensen. Ik was helemaal niet op zoek naar een relatie,
+        maar ik was toch wat aan het sturen met mensen, maar niks serieus.
+        Er zat niemand tussen die in de buurt woonde, knap was, ik normaal
+        mee kon praten, grappig was en van me kon houden.
+      </p>
+
+      <p>
+        Totdat ik op de meest random ochtend m'n Instagram opende en een
+        volgverzoek zag. Ik wist niet wat me overkwam. Ik klikte op je
+        profiel en wat zag ik? … Het allermooiste meisje wat ik ooit heb
+        gezien in m'n 17 jarig bestaan. En achteraf vind ik het nog steeds
+        grappig hoe iets wat eigenlijk zo klein lijkt, gewoon een van de
+        belangrijkste dingen uit mijn leven is geworden.
+      </p>
+
+      <p>
+        Ik ben niet de knapste, dat weet ik en dus was (logischerwijs)
+        m'n eerste instinct ook: ja, leuk, heel leuk, ik kan proberen
+        maar er is een grotere kans dat ik een echte dino tegen kom
+        (geen kip of krokodil) dan dat dit meisje iets in mij gaat zien.
+        Maar ik dacht: fuck it, ik stuur haar een berichtje.
+      </p>
+
+      <p>
+        Tijd ging voorbij, seconden, minuten, uren, zonder reactie.
+        Tot op een gegeven moment ik een reactie van je kreeg en wat er
+        toen door m'n lijf heen gierde was volstrekt ongeloofelijk.
+        Qua uiterlijk een perfect meisje die MIJ, Nicola De Wree,
+        een DM stuurt? Ik weet nog altijd dat ik daar echt veel te blij
+        mee was. En ergens is dat misschien ook wel het moment geweest
+        waarop ik voor het eerst dacht: misschien is dit helemaal niet
+        zo onmogelijk als ik eerst dacht.
+      </p>
+
+      <p>
+        Maar uiterlijk is nog niet voldoende, natuurlijk jouw innerlijk
+        en alles wat daar mee te maken heeft is ook zéér belangrijk.
+        We begonnen via Snap wat te sturen en eigenlijk, ondanks dat jij
+        vindt dat je in het begin kut en droog deed, vond ik dat net schattig.
+        Dat gaf mij eigenlijk het beeld dat, stel: we zouden iets beginnen,
+        dat je ook zo zou doen tegen andere gasten, een teken van loyaliteit
+        en vertrouwen.
+      </p>
+
+      <p>
+        En ik denk dat dat één van de dingen is die ik vanaf het begin
+        belangrijk heb gevonden aan jou. Niet alleen hoe je eruit ziet,
+        maar hoe je bent wanneer niemand je verplicht om op een bepaalde
+        manier te doen. Hoe je praat, hoe je reageert, hoe je met dingen
+        omgaat en hoe je mij soms compleet kan laten lachen met iets
+        waarvan je zelf waarschijnlijk niet eens door hebt dat het grappig is.
+      </p>
+
+      <p>
+        Maar eigenlijk klikte het al best wel snel tussen ons.
+        Ik kan best "vreemd" zijn en soms raar uit de hoek komen.
+        En dat is een van de redenen dat ik niet per se veel vrienden heb,
+        maar wel echt goeie vrienden, waar ik van weet wat ik aan hen heb.
+        Dat is dus ook een van de redenen dat ik niet met iedereen klik
+        en/of het goed kan vinden.
+      </p>
+
+      <p>
+        Maar met jou was het anders. Vanaf de eerste avond voelde het al
+        alsof we elkaar al jaren kenden. En zoals ik zei: dat maak ik echt
+        zelden tot niet mee. Het voelde niet alsof ik constant moest nadenken
+        over wat ik moest zeggen of hoe ik moest doen. Ik kon gewoon mezelf
+        zijn, met al mijn rare opmerkingen, slechte grappen, soms veel te
+        lange berichten en mijn typische manier van doen.
+      </p>
+
+      <p>
+        Sinds het moment dat jij mijn vriendin bent geworden is mijn leven
+        zo veel leuker en zo veel beter geworden. Je bent echt een van de
+        beste dingen die mij ooit is overkomen en dat meen ik oprecht uit
+        de grond van m'n hart. Je geeft me een gevoel van rust en geluk
+        dat ik moeilijk kan uitleggen. Soms is het letterlijk gewoon een
+        berichtje van jou, een xje, een voice bericht of even met jou praten
+        en ineens voelt een slechte dag een stuk minder slecht.
+      </p>
+
+      <p>
+        De vibe en band die wij hebben is echt uniek. Jij geeft me de
+        motivatie om elke dag uit bed te komen en te doen wat ik moet
+        en wil doen. En ik hoop dat je ook weet dat je niet constant iets
+        speciaal hoeft te doen om belangrijk voor mij te zijn. Soms is
+        gewoon samen praten over complete onzin al genoeg. Soms zijn het
+        onze inside jokes, soms een serieus gesprek en soms letterlijk
+        helemaal niks bijzonders.
+      </p>
+
+      <p>
+        Jouw ogen, jouw lach, jouw humor, jouw manier van praten,
+        jouw compassie, jouw empathie, jouw intuïtie, jouw respect,
+        jouw verleden, jouw onzekerheden, jouw haar, jouw mondje,
+        jouw kaakjes, jouw manier van bewegen, jouw manier van typen,
+        jouw sympathie, jouw medeleven, jouw bezorgdheid, jouw gebondenheid,
+        jouw communicatie, JOUW ALLES.
+      </p>
+
+      <p>
+        En dan heb ik nog maar 0.5% effectief benoemd. Niet omdat ik
+        gewoon honderd dingen kan opsommen om te zeggen dat je geweldig
+        bent, maar omdat er echt zoveel kleine dingen zijn die ik aan jou
+        waardeer. Dingen waarvan jij misschien denkt dat ze totaal normaal
+        zijn, maar die voor mij ondertussen gewoon bij "Kato" horen.
+        En juist die kleine dingen zijn misschien nog wel de dingen die ik
+        het meest zou missen als ze er ooit niet meer zouden zijn.
+      </p>
+
+      <p>
+        Lieve Kato, je bent echt geweldig, je bent een droom,
+        dit is een droom, dit voelt onwerkelijk. Waaraan ik jou ooit heb
+        verdiend heb ik echt geen idee van. Ik weet dat ik geen makkelijke
+        jeugd en verleden heb gehad, maar dat ik jou verdien? Dat snap ik
+        niet. Ik ben 'maar' een doodgewone jongen en dat ik jou mijn vriendin
+        mag noemen is nog gekker dan dat Barça nu ineens terug op 1:1 zit
+        (FFR).
+      </p>
+
+      <p>
+        Maar misschien moet ik ook stoppen met denken in termen van
+        "verdienen". Jij bent geen prijs die ik gewonnen heb en ik ben
+        ook niet iemand die perfect moet zijn om van jou te mogen houden.
+        Ik ben gewoon ongeloofelijk blij dat onze wegen elkaar gekruist
+        hebben en dat jij ervoor gekozen hebt om mij toe te laten in jouw
+        leven. En ik hoop dat ik je elke dag opnieuw kan tonen dat die keuze
+        voor mij alles betekent.
+      </p>
+
+      <p>
+        Je maakt mij zo ongeloofelijk gelukkig, met alles wat je doet,
+        jouw tekstjes, jouw xjes, jouw voice berichten, onze late night
+        calls, onze inside jokes, hoe we gewoon over letterlijk alles
+        kunnen praten, over leuke dingen, minder leuke dingen,
+        (jeugd)trauma's en beide onze slechte vorige relaties en nog
+        zo veel meer.
+      </p>
+
+      <p>
+        Ik vind het misschien nog het mooiste dat we niet alleen samen
+        kunnen lachen. We kunnen ook serieus zijn. We kunnen praten over
+        dingen die kut zijn, over dingen waar we onzeker over zijn en over
+        dingen die soms moeilijk zijn om uit te leggen. Dat we niet alleen
+        de leuke versie van elkaar zien, maar elkaar ook leren kennen op
+        momenten dat het leven even minder leuk is, betekent voor mij echt
+        veel.
+      </p>
+
+      <p>
+        Maar waar ik vooral blij en dankbaar voor ben is het feit dat wij
+        nooit op gaan geven op elkaar. We hebben beide een sterk karakter,
+        dat wisten we vanaf dag 1 al, net zoals dat er ongetwijfeld ups en
+        downs gingen en gaan komen.
+      </p>
+
+      <p>
+        Ik had ook nooit verwacht dat een relatie perfect zou zijn
+        (== zonder ruzie) en dat zou ik ook niet willen. Ik heb liever af
+        en toe eens een ruzie die deftig, op een respectvolle en volwassen
+        manier opgelost wordt dan een relatie waarbij je altijd maar "ja"
+        gaat knikken, zonder zelf kritisch te zijn, zonder zelf hun eigen
+        mening te verkondigen omdat ze simpelweg bang zijn voor ruzie.
+      </p>
+
+      <p>
+        Ik bekijk ruzie niet per se als iets negatiefs. Het is niet wij
+        tegen elkaar, het is jij en ik tegen het probleem en wij moeten
+        samen tot een goede oplossing komen. Ruzie is niet leuk, natuurlijk
+        niet, maar als we er op een volwassen manier mee omgaan kan zelfs
+        zoiets ons uiteindelijk dichter bij elkaar brengen. Ik wil nooit
+        winnen van jou. Ik wil dat wij winnen van het probleem.
+      </p>
+
+      <p>
+        En ik weet (en jij hopelijk ook?) dat ik NOOIT zal opgeven op dit
+        en op ons. Ik zou mijn eigen geluk nooit opgeven en zelfs tijdens
+        de ruzies, Kato, hou ik ongeloofelijk veel van je.
+      </p>
+
+      <p>
+        Ook al lijkt soms van niet, er is NIETS wat mijn gevoelens voor jou
+        kan reduceren of kan laten verdwijnen. Wat jij mij geeft had ik
+        nooit van kunnen dromen. En ik wil ook dat jij je veilig genoeg
+        voelt om altijd tegen mij te zeggen wanneer iets niet goed voelt.
+        Ik wil liever iets horen wat moeilijk is en er samen aan werken
+        dan dat je iets binnenhoudt om mij niet boos of verdrietig te maken.
+      </p>
+
+      <p>
+        Jij behandelt mij echt ongeloofelijk goed, je geeft me zelfzekerheid,
+        je geeft me een goed gevoel, je toont dag-in-dag uit dat je echt
+        van me houdt. En dat is iets wat ik nog nooit ervaren heb.
+        Mijn vorige relatie was echt toxic, enkel voor haar behoeftes
+        en niet echt voor liefde.
+      </p>
+
+      <p>
+        Wat ik nu voor jou voel is 100000000000 keer meer en mooier dan
+        wat ik ooit voor haar zou KUNNEN voelen. Niet omdat ik constant
+        terug wil kijken naar vroeger, maar juist omdat jij mij hebt laten
+        ervaren hoe anders iets kan voelen wanneer twee mensen elkaar
+        echt graag zien, elkaar respecteren en gewoon graag tijd met elkaar
+        doorbrengen.
+      </p>
+
+      <p>
+        Ik voel me echt goed bij je. Wat jouw ex heeft gedaan is ronduit
+        onrespectvol en onacceptabel. Ik hoop dat je door hebt dat ik anders
+        ben, dat ik een relatie wil voor jou, om plezier te hebben,
+        niet voor de S..., dat meen ik echt.
+      </p>
+
+      <p>
+        Ik wil altijd met jou praten over wat dan ook. Alles wat je dwars
+        zit wil ik m'n uiterste best doen om jou goed te doen voelen, jou
+        goed te behandelen en je de wereld te geven. Ik kan natuurlijk niet
+        letterlijk elk probleem oplossen en ik ga ook niet doen alsof ik
+        altijd weet wat ik moet zeggen, maar ik wil er wel altijd zijn.
+        Desnoods gewoon om naast je te zitten, naar je te luisteren en je
+        vast te pakken.
+      </p>
+
+      <p>
+        Ik wil dat je tegen alles en iedereen met trots kan zeggen dat ik
+        jouw vriendje ben, dat ik jou gelukkig kan maken en dat je echt
+        van me houdt. Nu, morgen en elke dag die daarop volgt.
+      </p>
+
+      <p>
+        Je maakt me zo zo zo gelukkig. Je bent het mooiste, liefste en
+        beste meisje ooit en je geeft me alles waar ik ooit van zou kunnen
+        dromen. Maar wat mij misschien nog gelukkiger maakt, is dat ik
+        mezelf bij jou niet anders hoef voor te doen. Ik kan gewoon Nicola
+        zijn. Soms irritant, soms raar, soms te enthousiast, soms veel te
+        emotioneel en soms gewoon compleet gestoord.
+      </p>
+
+      <p>
+        En toch ben jij er. Dat betekent voor mij meer dan ik waarschijnlijk
+        ooit normaal in woorden ga kunnen uitleggen.
+      </p>
+
+      <p>
+        Ik hoop dat je voor altijd mijn partner wilt blijven, dat je voor
+        altijd MIJN persoon wilt zijn en blijven, dat je mij voor altijd
+        gelukkig wilt blijven maken zoals je altijd zo goed doet. Ik weet
+        natuurlijk niet wat de toekomst exact gaat brengen, niemand kan dat
+        weten, maar ik weet wel dat ik met jou zoveel mogelijk van die
+        toekomst wil meemaken.
+      </p>
+
+      <p>
+        Ik zie maar één persoon, van mijn part mag elk meisje die verliefd
+        op mij is, mij ziet staan of "wel ziet zitten" dood vallen,
+        naar de maan gestuurd worden of verdronken worden in de oceaan,
+        maakt me niet uit.
+      </p>
+
+      <p>
+        IK weet wie ik wil en dat ben jij To. Er is maar 1 persoon voor mij,
+        1 iemand waarmee ik gelukkig wil worden, 1 iemand met wie ik echt
+        dit avontuur wil aangaan, 1 iemand waar ik een toekomst mee zie.
+      </p>
+
+      <p>
+        Een hele mooie toekomst met veel liefde, veel plezier, veel
+        herinneringen, veel domme momenten, veel foto's, veel gesprekken
+        en nog zoveel meer. Ik wil niet alleen de grote momenten met jou
+        meemaken. Ik wil ook de kleine dingen. Gewoon samen ergens zitten,
+        elkaar aankijken en beginnen lachen om iets wat niemand anders
+        begrijpt. Dat zijn uiteindelijk de momenten die je later misschien
+        nog het meeste onthoudt.
+      </p>
+
+      <p>
+        Ik wil dat je mn vrouw wordt, moeder van m'n kinderen en alles
+        wat je maar wilt bedenken. Ik weet dat dat heel ver vooruit klinkt,
+        maar ik lieg niet wanneer ik zeg dat ik dat soort toekomst met jou
+        kan zien. En ik weet ook dat we nog jong zijn en nog letterlijk
+        een heel leven voor ons hebben. Maar juist daarom vind ik het zo
+        mooi dat ik nu al iemand heb gevonden met wie ik dat allemaal zou
+        willen delen.
+      </p>
+
+      <p>
+        Ik wil alles met jou: kinderen, plezier maken, heel erg veel
+        houden van elkaar, elkaars familie accepteren en ook met hen
+        veel plezier beleven.
+      </p>
+
+      <p>
+        Ik wil leuke dingen gaan doen: samen uitstapjes doen, weekendjes
+        weg, late night drives, 's avonds gezellig samen praten, knuffelen
+        in bed, knuffelen met Bob, met Vanille en Mokka, samen met Flo naar
+        de McDonalds gaan, met jouw gezin een gezellige filmavond beleven
+        op de bank.
+      </p>
+
+      <p>
+        En ik wil daar nog duizend kleine dingen aan toevoegen. Samen
+        boodschappen doen en toch veel te veel snacks kopen. Samen ergens
+        verdwalen en doen alsof het expres was. Een slechte film kijken en
+        hem achteraf helemaal afbreken. Veel te lang wakker blijven terwijl
+        we de volgende ochtend eigenlijk vroeg op moeten. Foto's maken die
+        niemand ooit te zien krijgt. Samen lachen om iets compleet doms.
+        Gewoon leven, eigenlijk. Dat zijn de dingen die ik leuk vind.
+        Dat zijn de dingen waar ik oprecht gelukkig van word.
+      </p>
+
+      <p>
+        En misschien is dat uiteindelijk wel wat ik het meeste wil:
+        niet een perfect leven waarin alles altijd goed gaat, maar een leven
+        waarin we alles samen kunnen meemaken. De leuke dingen, de kut dingen,
+        de onverwachte dingen, de saaie dagen en de dagen waarop we ons
+        kapot lachen. Ik wil iemand zijn bij wie jij thuis kan komen, ook
+        als je dag volledig naar de klote was.
+      </p>
+
+      <p>
+        En tot slot wil ik dat je weet dat ik ongeloofelijk veel van je hou.
+        Elk woord in dit bericht komt recht uit m'n hart, maar ik wil ook
+        dat je weet: deze tekst, inclusief code, zijn bijna 38.000 woorden
+        en zo'n 200.000 tekens.
+      </p>
+
+      <p>
+        En zelfs hiermee kan ik niet uiten hoeveel ik van je hou.
+        Zelfs na al dit gok ik dat ik op... misschien net 1% zit.
+        Niet omdat ik nog eens 38.000 woorden wil schrijven om hetzelfde
+        honderd keer opnieuw te zeggen, maar omdat er gewoon zoveel in mijn
+        hoofd zit wanneer ik aan jou denk. Zoveel herinneringen die we nog
+        moeten maken, zoveel gesprekken die we nog moeten voeren en zoveel
+        momenten die nog moeten komen.
+      </p>
+
+      <p>
+        Je bent m'n favoriete persoon, de belangrijkste persoon in m'n leven
+        waar ik altijd mee kan praten, mn hart bij kan luchten en de persoon
+        waar ik het meeste van hou en het liefste een toekomst mee wil
+        in de HEEEELE wereld.
+      </p>
+
+      <p>
+        Jij bent MIJN persoon, Kato.
+      </p>
+
+      <p>
+        Ik wens jou de allerleukste, liefdevolle verjaardag ooit.
+        We zien elkaar hopelijk héél erg snel en dan kunnen we écht beginnen
+        met ons avontuur als koppel, daar kijk ik zo naar uit! Ik hoop dat
+        je vandaag even hard geniet als dat ik genoten heb van het maken
+        van dit alles. En als je ergens tijdens het lezen van deze brief
+        hebt gelachen, hebt moeten wenen, of gewoon even hebt gedacht
+        "wat is die jongen toch weer aan het doen", dan is mijn missie
+        eigenlijk al geslaagd.
+      </p>
+
+      <p>
+        Ik zou je nooit van je leven willen zien huilen, toch niet van ellende,
+        enkel van geluk en ik hoop nu oprecht dat de tranen van je wangen rollen.
+        Niet omdat ik je verdrietig wil maken, maar omdat ik hoop dat je voelt
+        hoeveel liefde ik in dit alles heb gestoken.
+      </p>
+
+      <p>
+        Dit is oprecht het beste beeld wat ik kan schetsen van hoeveel ik
+        van je hou, en dit is nog maar 1%...
+      </p>
+
+      <p>
+        Besef jij je, Kato, hoeveel ik dan echt van je hou?
+        Geloof mij: echt héél héél héél erg veel,
+        en dat zal voor altijd zo blijven liefje.
+      </p>
+
+      <p class="afsluiting">
+        Heel veel liefs en ik hoop dat je gaat genieten van jouw dagje x
+      </p>
+
+      <p class="naam">
+        Nicola
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+      Gemaakt met veel (en veel te veel roze.)
+
+      <div
+        style="
+          margin-top: 14px;
+          font-size: 13px;
+          opacity: 0.8;
+        "
+      >
+        © 14 augustus, 2026 Nicola De Wree
+      </div>
+
+      <div
+        style="
+          margin-top: 5px;
+          font-size: 12px;
+          opacity: 0.65;
+        "
+      >
+        Hosted by Neonnode NL
+      </div>
+
+    </footer>
+
+  </div>
+
+
+  <script>
+
+    /* ==========================================
+       START ALTIJD BOVENAAN
+       ========================================== */
+
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant"
+      });
+    });
+
+
+    /* ==========================================
+       ZWEVENDE ACHTERGROND-HARTJES
+       ========================================== */
+    /* ==========================================
+       ZWEVENDE ACHTERGROND-HARTJES
+       ========================================== */
+
+    const hartjes = [
+      "💗",
+      "🌸",
+      "✨",
+      "🦋",
+      "💜"
+    ];
+
+    setInterval(() => {
+
+      const h = document.createElement("div");
+
+      h.className = "hart-bg";
+
+      h.textContent =
+        hartjes[
+          Math.floor(
+            Math.random() * hartjes.length
+          )
+        ];
+
+      h.style.left =
+        Math.random() * 100 + "vw";
+
+      h.style.animationDuration =
+        (7 + Math.random() * 6) + "s";
+
+      document.body.appendChild(h);
+
+      setTimeout(() => {
+        h.remove();
+      }, 13000);
+
+    }, 700);
+
+
+    /* ==========================================
+       SPEL 1 — MEMORY
+       ========================================== */
+
+    const iconen = [
+      "🌸",
+      "💖",
+      "🦋",
+      "🍓",
+      "🌈",
+      "🧸"
+    ];
+
+    let openKaarten = [];
+    let beurten = 0;
+    let gevonden = 0;
+    let memoryBlok = false;
+
+
+    function startMemory() {
+
+      const bord =
+        document.getElementById("memory");
+
+      bord.innerHTML = "";
+
+      openKaarten = [];
+      beurten = 0;
+      gevonden = 0;
+      memoryBlok = false;
+
+      document.getElementById("mStatus").textContent =
+        "Beurten: 0";
+
+
+      const kaarten = [
+        ...iconen,
+        ...iconen
+      ];
+
+      kaarten.sort(
+        () => Math.random() - 0.5
+      );
+
+
+      kaarten.forEach((icoon) => {
+
+        const kaart =
+          document.createElement("div");
+
+        kaart.className = "mc";
+
+        kaart.textContent = icoon;
+
+        kaart.dataset.icoon = icoon;
+
+        kaart.setAttribute(
+          "role",
+          "button"
+        );
+
+        kaart.setAttribute(
+          "aria-label",
+          "Memory kaart"
+        );
+
+        kaart.onclick = () => {
+          draaiKaart(kaart);
+        };
+
+        bord.appendChild(kaart);
+
+      });
+
+    }
+
+
+    function draaiKaart(kaart) {
+
+      if (
+        memoryBlok ||
+        kaart.classList.contains("open") ||
+        kaart.classList.contains("klaar")
+      ) {
+        return;
+      }
+
+
+      kaart.classList.add("open");
+
+      openKaarten.push(kaart);
+
+
+      if (openKaarten.length !== 2) {
+        return;
+      }
+
+
+      beurten++;
+
+      document.getElementById("mStatus").textContent =
+        "Beurten: " + beurten;
+
+
+      const eerste = openKaarten[0];
+      const tweede = openKaarten[1];
+
+
+      if (
+        eerste.dataset.icoon ===
+        tweede.dataset.icoon
+      ) {
+
+        eerste.classList.remove("open");
+        tweede.classList.remove("open");
+
+        eerste.classList.add("klaar");
+        tweede.classList.add("klaar");
+
+        openKaarten = [];
+
+        gevonden++;
+
+
+        if (gevonden === iconen.length) {
+
+          document.getElementById("mStatus").textContent =
+            "🎉 Alles gevonden in " +
+            beurten +
+            " beurten! Jij bent slim én mooi.";
+
+        }
+
+      } else {
+
+        memoryBlok = true;
+
+        setTimeout(() => {
+
+          eerste.classList.remove("open");
+          tweede.classList.remove("open");
+
+          openKaarten = [];
+
+          memoryBlok = false;
+
+        }, 750);
+
+      }
+
+    }
+
+
+    startMemory();
+
+
+    /* ==========================================
+       SPEL 2 — VANG DE HARTJES
+       ========================================== */
+
+    const veld =
+      document.getElementById("veld");
+
+    const mand =
+      document.getElementById("mand");
+
+
+    let vallers = [];
+
+    let score = 0;
+    let tijd = 30;
+
+    let bezig = false;
+
+    let mandX = 50;
+
+    let vorigeTijd = 0;
+
+    let spawnTimer = 0;
+
+    let klok = null;
+
+    let animationFrame = null;
+
+
+    function positie(event) {
+
+      const rect =
+        veld.getBoundingClientRect();
+
+      let clientX;
+
+
+      if (
+        event.touches &&
+        event.touches.length > 0
+      ) {
+
+        clientX =
+          event.touches[0].clientX;
+
+      } else {
+
+        clientX =
+          event.clientX;
+
+      }
+
+
+      const x =
+        clientX - rect.left;
+
+
+      mandX =
+        Math.max(
+          6,
+          Math.min(
+            94,
+            (x / rect.width) * 100
+          )
+        );
+
+
+      mand.style.left =
+        mandX + "%";
+
+    }
+
+
+    veld.addEventListener(
+      "mousemove",
+      positie
+    );
+
+
+    veld.addEventListener(
+      "touchmove",
+      (event) => {
+
+        event.preventDefault();
+
+        positie(event);
+
+      },
+      {
+        passive: false
+      }
+    );
+
+
+    mand.style.left = "50%";
+
+
+    function startVangen() {
+
+      if (bezig) {
+        return;
+      }
+
+
+      vallers.forEach(
+        (v) => v.el.remove()
+      );
+
+      vallers = [];
+
+
+      score = 0;
+      tijd = 30;
+
+      bezig = true;
+
+      spawnTimer = 0;
+
+
+      document.getElementById("vStatus").textContent =
+        "Score: 0 · Tijd: 30";
+
+
+      if (klok) {
+        clearInterval(klok);
+      }
+
+
+      klok = setInterval(() => {
+
+        tijd--;
+
+
+        if (tijd <= 0) {
+
+          stopVangen();
+
+        } else {
+
+          document.getElementById("vStatus").textContent =
+            "Score: " +
+            score +
+            " · Tijd: " +
+            tijd;
+
+        }
+
+      }, 1000);
+
+
+      vorigeTijd =
+        performance.now();
+
+
+      animationFrame =
+        requestAnimationFrame(loop);
+
+    }
+
+
+    function stopVangen() {
+
+      bezig = false;
+
+
+      if (klok) {
+        clearInterval(klok);
+        klok = null;
+      }
+
+
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      }
+
+
+      vallers.forEach(
+        (v) => v.el.remove()
+      );
+
+      vallers = [];
+
+
+      document.getElementById("vStatus").textContent =
+        "Tijd voorbij! Je score: " +
+        score +
+        " hartjes 💕 (maar van mij krijg je er oneindig veel)";
+
+    }
+
+
+    function loop(nu) {
+
+      if (!bezig) {
+        return;
+      }
+
+
+      const dt =
+        (nu - vorigeTijd) / 16.7;
+
+      vorigeTijd = nu;
+
+
+      const hoogte =
+        veld.clientHeight;
+
+      const breedte =
+        veld.clientWidth;
+
+
+      spawnTimer += dt;
+
+
+      if (spawnTimer > 34) {
+
+        spawnTimer = 0;
+
+
+        const slecht =
+          Math.random() < 0.25;
+
+
+        const el =
+          document.createElement("div");
+
+
+        el.className = "val";
+
+        el.textContent =
+          slecht ? "💔" : "💖";
+
+
+        const x =
+          6 +
+          Math.random() *
+          Math.max(
+            10,
+            breedte - 40
+          );
+
+
+        el.style.left =
+          x + "px";
+
+        el.style.top =
+          "-30px";
+
+
+        veld.appendChild(el);
+
+
+        vallers.push({
+          el: el,
+          x: x,
+          y: -30,
+          v: 1.7 + Math.random() * 2,
+          slecht: slecht
+        });
+
+      }
+
+
+      /*
+       * Achterstevoren door de array lopen.
+       * Hierdoor kunnen elementen veilig verwijderd worden.
+       */
+
+      for (
+        let i = vallers.length - 1;
+        i >= 0;
+        i--
+      ) {
+
+        const v = vallers[i];
+
+
+        v.y += v.v * dt;
+
+        v.el.style.top =
+          v.y + "px";
+
+
+        const mandMidden =
+          (mandX / 100) *
+          breedte;
+
+
+        const geraakt =
+          v.y > hoogte - 60 &&
+          v.y < hoogte - 5 &&
+          Math.abs(
+            v.x + 14 - mandMidden
+          ) < 38;
+
+
+        if (geraakt) {
+
+          score +=
+            v.slecht
+              ? -1
+              : 1;
+
+
+          v.el.remove();
+
+          vallers.splice(i, 1);
+
+
+          document.getElementById("vStatus").textContent =
+            "Score: " +
+            score +
+            " · Tijd: " +
+            tijd;
+
+
+        } else if (v.y > hoogte) {
+
+          v.el.remove();
+
+          vallers.splice(i, 1);
+
+        }
+
+      }
+
+
+      animationFrame =
+        requestAnimationFrame(loop);
+
+    }
+
+
+    /* ==========================================
+       SPEL 3 — QUIZ
+       ========================================== */
+
+    const vragen = [
+
+      {
+        v: "1. Wat zou je graag met mij willen doen?",
+
+        a: [
+          "Samen een dagje naar een pretpark 🎢",
+          "Een gezellige filmavond houden 🍿",
+          "Samen ergens lekker gaan eten 🍝"
+        ]
+      },
+
+      {
+        v: "2. Waar zou je graag eens samen naartoe willen?",
+
+        a: [
+          "Een leuke stad ontdekken 🏙️",
+          "Naar het strand gaan 🏖️",
+          "Een mooie plek in de natuur bezoeken 🌿"
+        ]
+      },
+
+      {
+        v: "3. Wat lijkt je het gezelligst om samen te doen?",
+
+        a: [
+          "Samen bakken of koken 🧁",
+          "Een hele dag spelletjes spelen 🎲",
+          "Samen muziek luisteren en kletsen 🎶"
+        ]
+      },
+
+      {
+        v: "4. Wat zou je later graag nog eens met mij willen meemaken?",
+
+        a: [
+          "Een weekendje weg 🧳",
+          "Een concert bezoeken 🎤",
+          "Een spontaan avontuur beleven ✨"
+        ]
+      },
+
+      {
+        v: "5. Wat moeten we volgens jou sowieso nog een keer samen doen?",
+
+        a: [
+          "Samen heel veel foto's maken 📸",
+          "Een gek avontuur beleven 🤪",
+          "Gewoon samen een perfecte dag hebben 💗"
+        ]
+      }
+
+    ];
+
+
+    let qi = 0;
+
+
+    function startQuiz() {
+
+      qi = 0;
+
+      document.getElementById("qStatus").textContent =
+        "";
+
+      toonVraag();
+
+    }
+
+
+    function toonVraag() {
+
+      const vraag =
+        vragen[qi];
+
+
+      document.getElementById("vraag").textContent =
+        vraag.v;
+
+
+      const box =
+        document.getElementById("opties");
+
+
+      box.innerHTML = "";
+
+
+      vraag.a.forEach((tekst) => {
+
+        const knop =
+          document.createElement("button");
+
+
+        knop.type = "button";
+
+        knop.className = "opt";
+
+        knop.textContent = tekst;
+
+
+        knop.onclick = () => {
+          antwoord(knop);
+        };
+
+
+        box.appendChild(knop);
+
+      });
+
+    }
+
+
+    function antwoord(knop) {
+
+      const knoppen =
+        document.querySelectorAll(".opt");
+
+
+      knoppen.forEach((b) => {
+        b.disabled = true;
+        b.onclick = null;
+      });
+
+
+      knop.classList.add("goed");
+
+
+      setTimeout(() => {
+
+        qi++;
+
+
+        if (qi < vragen.length) {
+
+          toonVraag();
+
+        } else {
+
+          document.getElementById("vraag").textContent =
+            "Klaar! 💕";
+
+
+          document.getElementById("opties").innerHTML =
+            "";
+
+
+          document.getElementById("qStatus").textContent =
+            "Hopelijk gaan we snel een paar van deze dingen samen doen! 🥰";
+
+        }
+
+      }, 700);
+
+    }
+
+
+    startQuiz();
+
+
+    /* ==========================================
+       SPEL 4 — REACTIESPEL
+       ========================================== */
+
+    const reactieVeld = document.getElementById("reactieVeld");
+    const reactieHart = document.getElementById("reactieHart");
+
+    let reactieStart = 0;
+    let reactieTimer = null;
+    let reactieBezig = false;
+
+    function startReactieSpel() {
+      clearTimeout(reactieTimer);
+      reactieBezig = true;
+      reactieHart.style.display = "none";
+
+      document.getElementById("reactieStatus").textContent =
+        "Wacht... NIET klikken! 👀";
+
+      const wachttijd = 900 + Math.random() * 2600;
+
+      reactieTimer = setTimeout(() => {
+        if (!reactieBezig) return;
+
+        const rect = reactieVeld.getBoundingClientRect();
+        const x = 45 + Math.random() * Math.max(10, rect.width - 90);
+        const y = 45 + Math.random() * Math.max(10, rect.height - 90);
+
+        reactieHart.style.left = x + "px";
+        reactieHart.style.top = y + "px";
+        reactieHart.style.display = "flex";
+
+        reactieStart = performance.now();
+
+        document.getElementById("reactieStatus").textContent =
+          "NU!!! 💗💨";
+      }, wachttijd);
+    }
+
+    reactieHart.addEventListener("click", () => {
+      if (!reactieBezig) return;
+
+      const tijdMs = performance.now() - reactieStart;
+      reactieBezig = false;
+      reactieHart.style.display = "none";
+
+      document.getElementById("reactieStatus").textContent =
+        "⚡ " + (tijdMs / 1000).toFixed(3) +
+        " seconden! " +
+        (tijdMs < 350 ? "Rappe vingers? 😳" : "Good job! 💕");
+    });
+
+
+    /* ==========================================
+       SPEL 5 — RAAD HET GETAL
+       ========================================== */
+
+    let geheimGetal = 0;
+    let raadPogingen = 0;
+
+    function startRaadSpel() {
+      geheimGetal = Math.floor(Math.random() * 50) + 1;
+      raadPogingen = 0;
+
+      document.getElementById("raadInput").value = "";
+      document.getElementById("raadStatus").textContent =
+        "Pogingen: 0 · Ik heb een getal gekozen! 🤫";
+
+      document.getElementById("raadInput").focus();
+    }
+
+    function raadGetal() {
+      const input = document.getElementById("raadInput");
+      const gok = Number(input.value);
+
+      if (!gok || gok < 1 || gok > 50) {
+        document.getElementById("raadStatus").textContent =
+          "Kies een heel getal tussen 1 en 50! 😘";
+        return;
+      }
+
+      if (!geheimGetal) {
+        startRaadSpel();
+      }
+
+      raadPogingen++;
+
+      if (gok === geheimGetal) {
+        document.getElementById("raadStatus").textContent =
+          "🎉 LETS GOOOOO! Het was " + geheimGetal +
+          "! Geraden in " + raadPogingen +
+          " poging(en)! 💖";
+        return;
+      }
+
+      const richting = gok < geheimGetal ? "hoger" : "lager";
+
+      document.getElementById("raadStatus").textContent =
+        "NEEN! Denk na! 🤭 Probeer " + richting +
+        " · Pogingen: " + raadPogingen;
+
+      input.select();
+    }
+
+
+    /* ==========================================
+       SPEL 6 — EMOJI SPRINT
+       ========================================== */
+
+    const sprintEmojis = ["💖", "🌸", "🦋", "🍓", "🌈", "🧸", "✨", "💜"];
+
+    let sprintDoel = "";
+    let sprintBezig = false;
+    let sprintTimer = null;
+
+    function startEmojiSpel() {
+      clearTimeout(sprintTimer);
+
+      const keuze = [...sprintEmojis]
+        .sort(() => Math.random() - 0.5);
+
+      sprintDoel = keuze[0];
+      sprintBezig = false;
+
+      document.getElementById("emojiStatus").textContent =
+        "Onthoud deze: " + sprintDoel;
+
+      document.getElementById("emojiKeuze").innerHTML = "";
+
+      sprintTimer = setTimeout(() => {
+        sprintBezig = true;
+
+        document.getElementById("emojiStatus").textContent =
+          "Kies de juiste emoji! ⚡";
+
+        keuze.forEach((emoji) => {
+          const knop = document.createElement("button");
+
+          knop.type = "button";
+          knop.className = "emoji-knop";
+          knop.textContent = emoji;
+
+          knop.onclick = () => {
+            if (!sprintBezig) return;
+
+            sprintBezig = false;
+
+            if (emoji === sprintDoel) {
+              knop.classList.add("goed");
+
+              document.getElementById("emojiStatus").textContent =
+                "🎉 Goed gedaan mopppp! 💕";
+            } else {
+              knop.classList.add("fout");
+
+              document.getElementById("emojiStatus").textContent =
+                "SUKKELLLLL!!!!! Het was " + sprintDoel + "!";
+            }
+          };
+
+          document.getElementById("emojiKeuze").appendChild(knop);
+        });
+      }, 1200);
+    }
+
+    startRaadSpel();
+
+
+  </script>
+
+</body>
+</html>
